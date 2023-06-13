@@ -19,6 +19,7 @@ application {
         manifest {
             attributes 'Main-Class' : 'org.example.Main'
         }
+        archiveFileName = 'myname.jar'
         from configurations.compileClasspath.collect() {it.isDirectory() ? it : zipTree(it)}
     }
 }
